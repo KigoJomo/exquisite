@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About Page</title>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+
+    <link
+      rel="stylesheet"
+      href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+    />
+
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'collection' %}" class="me-auto">Collection</a>
+
+        <a href="{% url 'home' %}">
+          <img src="{% static 'images/logo.png' %}" alt="logo" class="logo" />
+        </a>
+
+        <a href="{% url 'contact' %}" class="ms-auto">contact</a>
+        <a href="{% url 'projects' %}">Projects</a>
+      </nav>
+    </header>
+
+    <section id="about" class="d-flex flex-column align-items-center gap-4">
+      <div class="w-100 h-75 position-relative tint flex-shrink-0 d-flex flex-column align-items-center justify-content-center gap-5">
+        <h1 class="font-lg">our legacy</h1>
+
+        <p class="w-50 text-center opacity-100">
+          Exquisite interiors represent the pinacle of design, combining
+          excelence in quality, performance and innovation, and careful
+          selection of materials.
+        </p>
+
+        <img
+          src="{% static 'images/interior-4.jpeg' %}"
+          alt="Interior Image"
+          class="w-100 h-100 z-0 position-absolute top-0"
+        />
+      </div>
+
+      <div class="w-100 d-flex align-items-end justify-content-between mt-5">
+        <h1>our journey: <br />searching for the essence</h1>
+
+        <p class="w-50">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate,
+          officia? Pariatur, saepe? Ipsa, provident aliquam. Quod ad unde quae
+          ipsam possimus ratione perferendis vitae laudantium ipsa consequatur.
+          Cupiditate, corporis voluptatem.
+        </p>
+      </div>
+
+      <div class="w-100 d-flex gap-5 images position-relative">
+        <img
+          src="{% static 'images/interior-5.jpeg' %}"
+          alt="Interior Image 5"
+          class=""
+        />
+        <img
+          src="{% static 'images/interior-6.jpeg' %}"
+          alt="Interior Image 6"
+          class=""
+        />
+
+        <img src="{% static 'images/star.png' %}" alt="" class="star position-absolute">
+      </div>
+    </section>
+  </body>
+</html>

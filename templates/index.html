@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    {% load static %}
+
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+
+    <link
+      rel="stylesheet"
+      href="{% static 'bootstrap/css/bootstrap.min.css' %}"
+    />
+
+    <script src="{% static 'bootstrap/js/bootstrap.min.js' %}"></script>
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="{% url 'about' %}">About</a>
+        <a href="{% url 'collection' %}" class="me-auto">Collection</a>
+
+        <a href="{% url 'home' %}">
+          <img src="{% static 'images/logo.png' %}" alt="logo" class="logo" />
+        </a>
+
+        <a href="{% url 'contact' %}" class="ms-auto">contact</a>
+        <a href="{% url 'projects' %}">Projects</a>
+      </nav>
+    </header>
+
+    <section
+      id="home"
+      class="d-flex flex-column align-items-center justify-content-between"
+    >
+      <div class="d-flex align-items-center justify-content-center gap-4">
+        <p class="m-0">Modern</p>
+        <div class="dot"></div>
+        <p class="m-0">Minimalist</p>
+      </div>
+
+      <h1 class="font-xl">Exquisite</h1>
+
+      <div class="w-100 d-flex align-items-end justify-content-between">
+        <div class="description">
+          <p>
+            Exquisite is dedicated to finding new approaches <br> to interior living
+            and functionalities to improve <br> daily life in the home.
+          </p>
+
+          <a href="{% url 'about' %}" class="button d-flex align-items-center justify-content-center gap-1">
+            Learn more
+            <span class="material-symbols-outlined"> arrow_right_alt </span>
+          </a>
+        </div>
+        <div class="images d-flex gap-2">
+
+          <div class="image">
+            <img src="{% static 'images/interior-1.jpeg' %}" alt="studio" />
+            <p>Studio</p>
+          </div>
+
+          <div class="image">
+            <img src="{% static 'images/interior-2.jpeg' %}" alt="lobby" />
+            <p>Lobby</p>
+          </div>
+          
+          <div class="image">
+            <img src="{% static 'images/interior-3.jpeg' %}" alt="living room" />
+            <p>Living Room</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+  </body>
+</html>
