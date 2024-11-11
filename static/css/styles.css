@@ -60,8 +60,15 @@ button {
   background: transparent;
   font-weight: 700;
   text-transform: capitalize;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   text-decoration: none;
   transition: all 0.3s ease-in-out;
+}
+.button .material-symbols-outlined,
+button .material-symbols-outlined {
+  font-size: 1rem;
 }
 .button *,
 button * {
@@ -75,6 +82,22 @@ button:hover {
 .button:hover *,
 button:hover * {
   color: var(--black);
+}
+
+.button-primary {
+  background: var(--white);
+  color: var(--black);
+  border: 1px solid var(--white);
+}
+.button-primary * {
+  color: var(--black);
+}
+.button-primary:hover {
+  background: var(--black);
+  color: var(--white);
+}
+.button-primary:hover * {
+  color: var(--white);
 }
 
 .tint {
@@ -157,9 +180,12 @@ html body section {
   width: 100%;
   height: 100%;
   padding: 3rem 2rem;
+  padding-top: 0rem;
   animation: fadeIn 0.75s ease-out;
 }
 html body #home {
+  gap: 4rem;
+  padding-top: 3rem;
   background: url("../images/counter.jpeg") no-repeat center center/cover;
   position: relative;
 }
@@ -265,4 +291,85 @@ html body #collection .collection-items .item:nth-child(even) .desc {
 }
 html body #collection .collection-items .item:nth-child(even) img {
   order: 1;
+}
+html body #projects .hero-section {
+  width: 100vw;
+  aspect-ratio: 4/1;
+}
+html body #projects .hero-section img:nth-of-type(1) {
+  aspect-ratio: 4/1;
+}
+html body #projects .hero-section .star {
+  height: 16rem;
+  bottom: -8rem;
+  right: 28rem;
+  filter: drop-shadow(8px -8px 16px #000000);
+}
+html body #projects .projects-container {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+html body #projects .projects-container .big {
+  width: 68%;
+}
+html body #projects .projects-container .small {
+  width: 28%;
+}
+html body #projects .projects-container .project {
+  flex-shrink: 1;
+}
+html body #projects .projects-container .project img {
+  width: 100%;
+  aspect-ratio: 16/9;
+  margin-bottom: 1rem;
+}
+html body #projects .projects-container .project p {
+  text-transform: capitalize;
+  font-family: "Alata", sans-serif;
+  opacity: 1;
+}
+html body #contact {
+  background: url("../images/counter.jpeg") center/cover no-repeat;
+  position: relative;
+}
+html body #contact::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(135deg, rgba(0, 0, 0, 0.9) 50%, rgba(0, 0, 0, 0.7));
+  z-index: 1;
+}
+html body #contact * {
+  z-index: 2;
+  position: relative;
+}
+html body #contact form .wrapper {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+html body #contact form .wrapper label {
+  text-transform: capitalize;
+  opacity: 0.8;
+}
+html body #contact form .wrapper input,
+html body #contact form .wrapper textarea {
+  outline: transparent;
+  border: 1px solid rgba(255, 255, 255, 0.1764705882);
+  background: transparent;
+  padding: 0.5rem;
+  border-radius: 0;
+  resize: none;
+  transition: all 0.5s ease;
+}
+html body #contact form .wrapper input:focus,
+html body #contact form .wrapper textarea:focus {
+  outline: transparent;
+  border: 1px solid #fff;
 }

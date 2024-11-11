@@ -6,7 +6,7 @@
     <title>Projects Page</title>
     {% load static %}
 
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 
     <link
       rel="stylesheet"
@@ -22,7 +22,7 @@
         <a href="{% url 'collection' %}" class="me-auto">Collection</a>
 
         <a href="{% url 'home' %}">
-          <img src="{% static 'images/logo.png' %}" alt="logo" class="logo">
+          <img src="{% static 'images/logo.png' %}" alt="logo" class="logo" />
         </a>
 
         <a href="{% url 'contact' %}" class="ms-auto">contact</a>
@@ -30,8 +30,96 @@
       </nav>
     </header>
 
-    <section>
-      <h1>This is the Projects Page</h1>
+    <section id="projects" class="d-flex flex-column align-items-center gap-5">
+      <div class="hero-section position-relative flex-shrink-0">
+        <img
+          src="{% static 'images/interior-6.jpeg' %}"
+          alt=""
+          class="w-100 h-100 object-fit-cover"
+        />
+
+        <img
+          src="{% static 'images/star.png' %}"
+          alt=""
+          class="star position-absolute"
+        />
+      </div>
+
+      <div class="d-flex align-items-center justify-content-between gap-5">
+        <h1 class="font-xl">projects</h1>
+
+        <div class="w-50 ms-5">
+          <h3>Exquisite design projects</h3>
+          <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quis
+            aperiam voluptate quibusdam reprehenderit, a ea voluptates provident
+            deleniti praesentium repellendus labore mollitia. Alias similique
+            repudiandae debitis accusamus, voluptas iste perspiciatis!
+          </p>
+        </div>
+      </div>
+
+      <div class="projects-container">
+        <div class="project big">
+          <img src="{% static 'images/interior-1.jpeg' %}" alt="" />
+          <p>new york, USA</p>
+        </div>
+
+        <div class="small d-flex flex-column gap-4">
+          <div class="project w-100">
+            <img src="{% static 'images/interior-2.jpeg' %}" alt="" />
+            <p>Tel Aviv, israel</p>
+          </div>
+
+          <div class="project w-100">
+            <img src="{% static 'images/interior-3.jpeg' %}" alt="" />
+            <p>Taipei, taiwan</p>
+          </div>
+        </div>
+
+        <div class="big d-flex gap-4">
+          <div class="project w-50">
+            <img src="{% static 'images/interior-4.jpeg' %}" alt="" />
+            <p>taichung, taiwan</p>
+          </div>
+
+          <div class="project w-50">
+            <img src="{% static 'images/interior-5.jpeg' %}" alt="" />
+            <p>cannes, france</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="projects-container">
+        <div class="small d-flex flex-column gap-4">
+          <div class="project w-100">
+            <img src="{% static 'images/interior-2.jpeg' %}" alt="" />
+            <p>dublin, ireland</p>
+          </div>
+
+          <div class="project w-100">
+            <img src="{% static 'images/interior-3.jpeg' %}" alt="" />
+            <p>florence, italy</p>
+          </div>
+        </div>
+
+        <div class="project big">
+          <img src="{% static 'images/interior-1.jpeg' %}" alt="" />
+          <p>noltorey, norway</p>
+        </div>
+
+        <div class="big d-flex gap-4 ms-auto">
+          <div class="project w-50">
+            <img src="{% static 'images/interior-4.jpeg' %}" alt="" />
+            <p>mosman, australia</p>
+          </div>
+
+          <div class="project w-50">
+            <img src="{% static 'images/interior-5.jpeg' %}" alt="" />
+            <p>tel aviv, israel</p>
+          </div>
+        </div>
+      </div>
     </section>
   </body>
 </html>

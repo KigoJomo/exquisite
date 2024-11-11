@@ -6,7 +6,7 @@
     <title>contact Page</title>
     {% load static %}
 
-    <link rel="stylesheet" href="{% static 'css/styles.css' %}"/>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
 
     <link
       rel="stylesheet"
@@ -22,7 +22,7 @@
         <a href="{% url 'collection' %}" class="me-auto">Collection</a>
 
         <a href="{% url 'home' %}">
-          <img src="{% static 'images/logo.png' %}" alt="logo" class="logo">
+          <img src="{% static 'images/logo.png' %}" alt="logo" class="logo" />
         </a>
 
         <a href="{% url 'contact' %}" class="ms-auto">contact</a>
@@ -30,8 +30,37 @@
       </nav>
     </header>
 
-    <section>
-      <h1>contact us</h1>
+    <section id="contact" class="d-flex align-items-center gap-4">
+      <div class="left w-50 h-75">
+        <h1 class="font-lg">let's talk!</h1>
+
+        <div class="w-50 mx-auto opacity-25">
+          <img src="{% static 'images/star.png' %}" alt="" class="w-100" />
+        </div>
+      </div>
+
+      <form class="right w-50 h-75 d-flex flex-column gap-4 px-5">
+        <h2>reach out to us.</h2>
+
+        <div class="wrapper">
+          <label for="name">Your name</label>
+          <input type="text" name="name" id="name" />
+        </div>
+
+        <div class="wrapper">
+          <label for="email">what's your email address</label>
+          <input type="email" name="email" id="email" />
+        </div>
+
+        <div class="wrapper">
+          <label for="message">message</label>
+          <textarea name="message" id="message"></textarea>
+        </div>
+
+        <button class="button-primary">
+          Send <span class="material-symbols-outlined"> send </span>
+        </button>
+      </form>
     </section>
   </body>
 </html>
